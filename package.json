@@ -4,7 +4,8 @@
   "description": "MEAN tasklist App - MongoDB, Express, Angular & NodeJS",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node server"
   },
   "repository": {
     "type": "git",
