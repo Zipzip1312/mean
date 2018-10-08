@@ -1,4 +1,4 @@
-Just a simple task list MEAN App using: MongoDB, Express, Angular 6 & NodeJS
+Just a simple task list
 
 ### MongoDB
  - mlab.com - holds mongo database
