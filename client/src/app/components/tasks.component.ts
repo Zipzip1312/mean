@@ -31,4 +31,29 @@ export class TasksComponent implements OnInit {
         });
   }
 
+  updateStatus(task: Task) {
+    const _task = {
+      _id: task._id,
+      title: task.title,
+      isDone: !task.isDone
+    };
+
+    this.tasksService.updateTask(_task).subscribe(data => {
+      task.isDone = !task.isDone;
+    });
+  }
+
+  deleteTask(id): void {
+    const tasks = this.tasks;
+    this.tasksService.deleteTask(id).subscribe(data => {
+      if (data.n === 1) { //  it's a kinda status ok of deleted obj, response of method delete {n: 1, ...}
+        for (let i = 0; i < tasks.length; i++) {
+          if (tasks[i]._id === id) {
+            tasks.splice(i, 1);
+          }
+        }
+      }
+    });
+  }
+
 }
