@@ -1,3 +1,4 @@
+import { Task } from './task.model';
 import { Component, OnInit } from '@angular/core';
 import { TasksService } from './tasks.service';
 
@@ -7,11 +8,27 @@ import { TasksService } from './tasks.service';
   styleUrls: ['./tasks.component.css']
 })
 export class TasksComponent implements OnInit {
-  tasks = [];
+  tasks: Task[];
+  title: string;
+
   constructor( private tasksService: TasksService) { }
 
   ngOnInit() {
     this.tasksService.getTasks().subscribe( res => this.tasks = res );
+  }
+
+  addTask(event) {
+    event.preventDefault();
+    const newTask: Task = {
+      title: this.title,
+      isDone: false
+    };
+
+    this.tasksService.addTask(newTask)
+        .subscribe(task => {
+          this.tasks.push(<Task>task);
+          this.title = '';
+        });
   }
 
 }
