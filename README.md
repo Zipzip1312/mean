@@ -1,5 +1,5 @@
-# MEAN
+Simple MEAN App using: MongoDB, Express, Angular 6 & NodeJS
 
-
-# MongoDB
+### MongoDB
 mlab.com - holds mongo database
+tasks.json - exported db
