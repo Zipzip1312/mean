@@ -1,0 +1,6 @@
+<div class="row align-items-center" *ngFor="let task of tasks">
+  <div class="col-1"><input type="checkbox"></div>
+  <div class="col-7">{{task.title}}</div>
+  <div class="col-4"><input type="button" value="Delete" class="btn btn-danger"></div>
+  <p>Status: {{task.isDone}}</p>
+</div>
