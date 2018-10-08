@@ -5,9 +5,12 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var tasks = require('./routes/tasks');
 
+var cors = require('cors');
 var port = 3000;
 
 var app = express();
+
+app.use(cors());
 
 // View Engine
 app.set('views', path.join(__dirname, 'views'));
