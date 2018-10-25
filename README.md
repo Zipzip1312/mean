@@ -1,4 +1,4 @@
-Just a simple task list
+Just a simple task list using MEAN stack
 
 ### MongoDB
  - mlab.com - holds mongo database
