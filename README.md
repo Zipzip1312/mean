@@ -1,4 +1,4 @@
-Just a simple task list using MEAN stack
+Just a simple ToDo list using MEAN stack
 
 ### MongoDB
  - mlab.com - holds mongo database
@@ -8,7 +8,9 @@ Just a simple task list using MEAN stack
  - npm install
  - npm run watch
 
-##### Start client
+##### Start client (in another terminal window)
  - cd client
  - npm install
  - ng serve
+
+Navigate to localhost:4200
